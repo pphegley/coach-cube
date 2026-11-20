@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cube of Spheres — material and motion studies created in Blender."
+    />
+    <title>Cube of Spheres — Blender Studies</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js?v=13" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Cube of Spheres, return to top">
+        <img class="wordmark-logo" src="./assets/coach-logo.svg" alt="" aria-hidden="true" />
+        <span>Coach Cube</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#materials">Materials</a>
+        <a href="#motion">Motion</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to light viewing room">
+        <span class="theme-icon" aria-hidden="true"></span>
+        <span class="theme-label">Light room</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Blender explorations / 19.11.26</p>
+          <h1>Coach Cube</h1>
+          <p class="hero-intro">
+            Twenty-seven spheres arranged as a precise cubic lattice, explored through
+            surface, light, transparency, and motion.
+          </p>
+          <a class="text-link" href="#materials">Enter the study</a>
+        </div>
+        <figure class="hero-artwork">
+          <img
+            src="./assets/animations/continuous-wave.webp"
+            alt="Endless summer loop moving continuously through the Cube of Spheres lattice"
+          />
+        </figure>
+        <dl class="hero-stats" aria-label="Project summary">
+          <div><dt>Object</dt><dd>27 spheres</dd></div>
+          <div><dt>Surfaces</dt><dd>08 studies</dd></div>
+          <div><dt>Loops</dt><dd>04 systems</dd></div>
+          <div><dt>Renderer</dt><dd>Blender</dd></div>
+        </dl>
+      </section>
+
+      <section class="section materials-section" id="materials">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Surface</p>
+          <h2>Material studies</h2>
+          <p>
+            The geometry, camera, and central light remain fixed. Only the behavior of
+            the sphere surface changes.
+          </p>
+        </div>
+
+        <div class="material-stage">
+          <figure class="material-preview viewing-surface">
+            <img id="material-image" src="" alt="" />
+            <button class="expand-button" type="button" data-expand="material" aria-label="View material fullscreen">
+              <span aria-hidden="true">↗</span>
+            </button>
+            <figcaption>
+              <span id="material-index">01 / 08</span>
+              <span id="material-caption">Dark shadow</span>
+            </figcaption>
+          </figure>
+
+          <div class="material-details">
+            <div>
+              <p class="eyebrow">Selected surface</p>
+              <h3 id="material-title">Dark shadow</h3>
+              <p id="material-description"></p>
+            </div>
+            <dl class="detail-list" id="material-meta"></dl>
+            <div class="material-controls" aria-label="Material navigation">
+              <button type="button" id="previous-material" aria-label="Previous material">←</button>
+              <span id="material-position">01 — 08</span>
+              <button type="button" id="next-material" aria-label="Next material">→</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="material-grid" id="material-grid" role="group" aria-label="All material studies"></div>
+      </section>
+
+      <section class="section motion-section" id="motion">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Motion</p>
+          <h2>Expression loops</h2>
+          <p>
+            Four perfectly repeating behaviors, from localized force fields to
+            whole-lattice transformations.
+          </p>
+        </div>
+        <div class="motion-grid" id="motion-grid"></div>
+      </section>
+
+      <section class="closing">
+        <p class="eyebrow">End of study</p>
+        <p>Coach Cube</p>
+        <p>Blender / 2026</p>
+      </section>
+    </main>
+
+    <dialog class="lightbox" id="lightbox">
+      <button class="lightbox-close" type="button" aria-label="Close fullscreen view">×</button>
+      <div class="lightbox-media"></div>
+      <div class="lightbox-caption">
+        <span class="eyebrow" id="lightbox-type"></span>
+        <span id="lightbox-title"></span>
+      </div>
+    </dialog>
+  </body>
+</html>
